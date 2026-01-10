@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 // Image URLs
-const CITRUS_HERO = "https://images.unsplash.com/photo-1582042784795-a4f65c024d35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjB0cmVlfGVufDB8MHx8fDE3NjY0NTg0MjJ8MA&ixlib=rb-4.1.0&q=85";
+const CITRUS_HERO = "https://images.unsplash.com/photo-1557800636-894a64c1696f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHwxfHxjaXRydXMlMjBncm92ZXxlbnwwfDB8fHwxNzM1MTM5MjAwfDA&ixlib=rb-4.1.0&q=85";
 
 export function CitrusPage() {
   const citrusTypes = [
