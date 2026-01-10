@@ -9,9 +9,9 @@ const CITRUS_HERO = "https://images.unsplash.com/photo-1557800636-894a64c1696f?c
 
 export function CitrusPage() {
   const citrusTypes = [
-    { name: "Satsumas/Mandarins", description: "Owari, Brown Select, and more seedless favorites.", link: "/citrus/satsumas-mandarins" },
-    { name: "The Kuats", description: "Kumquats and unique hybrids.", link: "/citrus/the-kuats" },
-    { name: "Oranges/Tangerines", description: "Sweet, juicy eating and juice oranges.", link: "/citrus/oranges-tangerines" },
+    { name: "Satsuma/Mandarin", description: "Owari, Brown Select, and more seedless favorites.", link: "/citrus/satsumas-mandarins" },
+    { name: "The Quats", description: "Kumquats and unique hybrids.", link: "/citrus/the-kuats" },
+    { name: "Orange/Tangerine", description: "Sweet, juicy eating and juice oranges.", link: "/citrus/oranges-tangerines" },
     { name: "Lemons/Limes", description: "Zesty kitchen essentials.", link: "/citrus/lemons-limes" },
     { name: "The Big Stuff", description: "Pomelos, Grapefruits, and giants.", link: "/citrus/the-big-stuff" },
     { name: "Variegated Varieties", description: "Beautiful ornamental and edible citrus.", link: "/citrus/variegated-varieties" },
