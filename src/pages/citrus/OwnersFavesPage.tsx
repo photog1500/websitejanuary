@@ -20,8 +20,8 @@ export function OwnersFavesPage() {
       
       <HeroSection 
         title="Owner's Faves"
-        subtitle="Our personal recommendations for your orchard."
-        imageUrl="https://images.unsplash.com/photo-1421167418805-7f170f775f28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHwxfHxvcmNoYXJkJTIwb3duZXJ8ZW58MHwwfHx8MTc2NjQ2NDIwMXww&ixlib=rb-4.1.0&q=85"
+        subtitle="Our personal recommendations for your orchard. These will thrive here and taste amazing"
+        imageUrl="Citrus on Steps.jpg"
       />
 
       <div className="container mx-auto px-4 py-12">
