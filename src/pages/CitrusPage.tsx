@@ -29,7 +29,7 @@ export function CitrusPage() {
 
       <div className="container mx-auto px-4 py-12">
         <ContentSection 
-          title="Our Citrus Varieties" 
+          title="Citrus Varieties in our Grove" 
           subtitle="Grown for Flavor & Resilience"
         >
           <p className="mb-8 text-center max-w-2xl mx-auto">
