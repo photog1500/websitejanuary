@@ -24,7 +24,7 @@ export const citrusVarieties = {
     id: "satsumas",
     title: "Satsuma & Mandarin",
     subtitle: "Easy peeling, seedless, and cold hardy varieties.",
-    imageUrl: "https://images.unsplash.com/photo-1582042784795-a4f65c024d35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjB0cmVlfGVufDB8MHx8fDE3NjY0NTg0MjJ8MA&ixlib=rb-4.1.0&q=85",
+    imageUrl: "https://blogs.ifas.ufl.edu/washingtonco/files/2017/10/satsuma-11-1024x768.jpg",
     varieties: [
       {
         name: "Owari",
@@ -194,7 +194,7 @@ export const citrusVarieties = {
     id: "oranges",
     title: "Oranges & Tangerines",
     subtitle: "Full-flavored varieties for eating and juice.",
-    imageUrl: "https://images.unsplash.com/photo-1567359781514-3b963ff8f78e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHw4fHxvcmFuZ2V8ZW58MHwwfHx8fDE3NjY0NTg0MjJ8MA&ixlib=rb-4.1.0&q=85",
+    imageUrl: "https://www.yarden.com/wp-content/uploads//HamlinOrange_Tree.jpg",
     varieties: [
       {
         name: "Washington Naval",
@@ -227,7 +227,7 @@ export const citrusVarieties = {
     id: "lemons",
     title: "Lemons & Limes",
     subtitle: "Essential citrus for culinary and fresh market.",
-    imageUrl: "https://images.unsplash.com/photo-1580080169212-a7bf72c4d8d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHw5fHxsZW1vbnN8ZW58MHwwfHx8fDE3NjY0NTg0MjJ8MA&ixlib=rb-4.1.0&q=85",
+    imageUrl: "https://cdn11.bigcommerce.com/s-uemzj79jf9/images/stencil/1024x1024/products/1735/3800/Lemon_Lime_Tree__59676.1592504437.jpg?c=2",
     varieties: [
       {
         name: "Lisbon",
