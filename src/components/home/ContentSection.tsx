@@ -71,12 +71,7 @@ export function ContentSection({
               {children}
             </div>
 
-            <Button variant="outline" className="mt-4 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
-              Learn More
-            </Button>
-          </div>
-
-          {/* Image Side */}
+            {/* Image Side */}
           <div className={cn(
             "relative",
             reverse && "lg:col-start-1"
