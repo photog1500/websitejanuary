@@ -5,13 +5,13 @@ import { ArrowRight, Citrus, Apple, Sprout, TreeDeciduous, ArrowLeft } from "luc
 import { useParams, Link } from 'react-router-dom';
 
 // Image URLs
-const NURSERY_HERO = "images.unsplash.com";
+const NURSERY_HERO = "https://i0.wp.com/citrusindustry.net/wp-content/uploads/2025/11/Agromillora.jpg?resize=500%2C333&ssl=1";
 const CITRUS_IMAGE = "/CitrusOrchardPicked.jpg";
 const FRUIT_IMAGE = "/appleblossom1.jpg";
 const OTHER_IMAGE = "/otherfruit1.jpg";
 const SCIONS_IMAGE = "/scion1.jpg";
 // Path to your new PNG in the public folder
-const QUARANTINE_IMAGE = "/public/citrus quarantine.png";
+const QUARANTINE_IMAGE = "/citrus quarantine.png";
 
 export function NurseryPage() {
   const { category } = useParams();
