@@ -22,7 +22,7 @@ export interface VarietyCategory {
 export const citrusVarieties = {
   satsumas: {
     id: "satsumas",
-    title: "Satsumas & Mandarins",
+    title: "Satsuma & Mandarin",
     subtitle: "Easy peeling, seedless, and cold hardy varieties.",
     imageUrl: "https://images.unsplash.com/photo-1582042784795-a4f65c024d35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjB0cmVlfGVufDB8MHx8fDE3NjY0NTg0MjJ8MA&ixlib=rb-4.1.0&q=85",
     varieties: [
@@ -96,7 +96,7 @@ export const citrusVarieties = {
     id: "Quats",
     title: "The Quats",
     subtitle: "Exceptional cold-hardy Asian varieties.",
-    imageUrl: "https://images.unsplash.com/photo-1582042784795-a4f65c024d35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NzI1Njd8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjB0cmVlfGVufDB8MHx8fDE3NjY0NTg0MjJ8MA&ixlib=rb-4.1.0&q=85",
+    imageUrl: "https://www.rogersgardens.com/cdn/shop/files/NagamiKumquat_e1d3f5ed-4394-4584-b940-b34b68845d1d_640x.jpg?v=1752190476",
     varieties: [
       {
         name: "Nagami",
