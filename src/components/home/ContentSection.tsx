@@ -16,7 +16,7 @@ export function ContentSection({
   title, 
   subtitle, 
   children, 
-  imageUrl = "/varigatedmineola2.jpg" 
+  imageUrl = "varigatedmineola2.jpg" 
   imageAlt = "Orchard Image", 
   reverse = false,
   centered = false
