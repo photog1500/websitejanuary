@@ -16,7 +16,7 @@ export function ContentSection({
   title, 
   subtitle, 
   children, 
-  imageUrl,
+  imageUrl, 
   imageAlt = "Orchard Image", 
   reverse = false,
   centered = false
@@ -71,7 +71,12 @@ export function ContentSection({
               {children}
             </div>
 
-            {/* Image Side */}
+            <Button variant="outline" className="mt-4 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+              Learn More
+            </Button>
+          </div>
+
+          {/* Image Side */}
           <div className={cn(
             "relative",
             reverse && "lg:col-start-1"
