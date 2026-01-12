@@ -26,27 +26,27 @@ const harvestData: FruitCategory[] = [
     category: "Citrus",
     items: [
       { name: "Satsumas & Mandarins", periods: [{ start: 10, end: 11 }, { start: 0, end: 0 }], color: "bg-orange-500" }, // Nov-Jan
-      { name: "Navel Oranges", periods: [{ start: 10, end: 1 }], color: "bg-orange-600" }, // Nov-Feb
-      { name: "Kumquats", periods: [{ start: 10, end: 2 }], color: "bg-orange-400" }, // Nov-Mar
-      { name: "Lemons & Limes", periods: [{ start: 8, end: 2 }], color: "bg-yellow-400" }, // Sep-Mar (some year round, but mostly winter)
-      { name: "Grapefruit", periods: [{ start: 11, end: 3 }], color: "bg-red-400" }, // Dec-Apr
+      { name: "Navel Oranges", periods: [{ start: 10, end: 1 }], color: "bg-orange-200" }, // Oct-Jan
+      { name: "Kumquats", periods: [{ start: 10, end: 2 }], color: "bg-orange-400" }, // Oct-Febr
+      { name: "Lemons & Limes", periods: [{ start: 8, end: 3 }], color: "bg-yellow-400" }, // Aug-Mar (some year round, but mostly winter)
+      { name: "Grapefruit", periods: [{ start: 11, end: 3 }], color: "bg-red-400" }, // Nov-Apr
     ]
   },
   {
     category: "Stone Fruit",
     items: [
-      { name: "Peaches (Early)", periods: [{ start: 3, end: 4 }], color: "bg-rose-400" }, // Apr-May
-      { name: "Peaches (Mid/Late)", periods: [{ start: 5, end: 7 }], color: "bg-rose-500" }, // Jun-Aug
+      { name: "Peaches (Early)", periods: [{ start: 5, end: 7 }], color: "bg-rose-400" }, // Apr-May
+      { name: "Peaches (Mid/Late)", periods: [{ start: 6, end: 9 }], color: "bg-rose-500" }, // Jun-Aug
       { name: "Nectarines", periods: [{ start: 4, end: 6 }], color: "bg-red-500" }, // May-Jul
-      { name: "Plums", periods: [{ start: 4, end: 6 }], color: "bg-purple-500" }, // May-Jul
+      { name: "Plums", periods: [{ start: 4, end: 8 }], color: "bg-purple-500" }, // May-Jul
     ]
   },
   {
     category: "Pome Fruit & Others",
     items: [
-      { name: "Apples", periods: [{ start: 5, end: 9 }], color: "bg-red-600" }, // Jun-Oct
+      { name: "Apples", periods: [{ start: 5, end: 10 }], color: "bg-red-600" }, // Jun-Oct
       { name: "Pears", periods: [{ start: 7, end: 9 }], color: "bg-green-500" }, // Aug-Oct
-      { name: "Persimmons", periods: [{ start: 8, end: 10 }], color: "bg-orange-700" }, // Sep-Nov
+      { name: "Persimmons", periods: [{ start: 9, end: 10 }], color: "bg-orange-700" }, // Sep-Nov
       { name: "Loquats", periods: [{ start: 2, end: 3 }], color: "bg-yellow-500" }, // Mar-Apr
     ]
   },
