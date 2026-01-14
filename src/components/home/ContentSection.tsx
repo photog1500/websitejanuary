@@ -12,9 +12,9 @@ interface ContentSectionProps {
   imageAlt?: string;
   reverse?: boolean;
   centered?: boolean;
-  showButton?: boolean; // NEW: allow hiding the "Learn More" button where needed
-  onButtonClick?: () => void; // optional handler
-  buttonText?: string; // defaults to "Learn More"
+  showButton?: boolean;
+  onButtonClick?: () => void;
+  buttonText?: string;
 }
 
 export function ContentSection({
@@ -29,8 +29,9 @@ export function ContentSection({
   onButtonClick,
   buttonText = "Learn More",
 }: ContentSectionProps) {
-  // a11y id for section labelling
-  const headingId = "content-section-title";
+  // Unique, stable ID per render tree (React 18+)
+  const reactId = (React as any).useId ? (React as any).useId() : undefined;
+  const headingId = reactId ? `content-section-title-${reactId}` : `content-section-title-${title.replace(/\s+/g, "-").toLowerCase()}`;
 
   if (centered) {
     return (
@@ -117,7 +118,6 @@ export function ContentSection({
           {/* Image Side */}
           <div className={cn("relative", reverse && "lg:col-start-1")}>
             <div className="relative aspect-[4/5] md:aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Only render <img> when imageUrl is provided to avoid broken image icon */}
               {imageUrl ? (
                 <img
                   src={imageUrl}
@@ -125,17 +125,12 @@ export function ContentSection({
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               ) : (
-                <div
-                  aria-hidden="true"
-                  className="w-full h-full bg-muted/40"
-                />
+                <div aria-hidden="true" className="w-full h-full bg-muted/40" />
               )}
-
-              {/* Decorative Border */}
               <div className="absolute inset-4 border border-white/30 rounded-xl pointer-events-none" />
             </div>
 
-            {/* Background Texture Elements (self-closing divs are OK in JSX) */}
+            {/* Background Texture Elements */}
             <div className="absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
             <div className="absolute -z-10 -top-8 -left-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
           </div>
@@ -144,3 +139,4 @@ export function ContentSection({
     </section>
   );
 }
+``
