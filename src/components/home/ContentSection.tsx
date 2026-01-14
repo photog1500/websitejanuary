@@ -1,4 +1,6 @@
-import React from 'react';
+
+// src/components/home/ContentSection.tsx
+import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -10,92 +12,135 @@ interface ContentSectionProps {
   imageAlt?: string;
   reverse?: boolean;
   centered?: boolean;
+  showButton?: boolean; // NEW: allow hiding the "Learn More" button where needed
+  onButtonClick?: () => void; // optional handler
+  buttonText?: string; // defaults to "Learn More"
 }
 
-export function ContentSection({ 
-  title, 
-  subtitle, 
-  children, 
-  imageUrl, 
-  imageAlt = "Orchard Image", 
+export function ContentSection({
+  title,
+  subtitle,
+  children,
+  imageUrl,
+  imageAlt = "Orchard Image",
   reverse = false,
-  centered = false
+  centered = false,
+  showButton = true,
+  onButtonClick,
+  buttonText = "Learn More",
 }: ContentSectionProps) {
-  
+  // a11y id for section labelling
+  const headingId = "content-section-title";
+
   if (centered) {
     return (
-      &lt;section className="py-24 bg-background border-b border-border/40"&gt;
-        &lt;div className="container mx-auto px-4 md:px-6 max-w-4xl text-center space-y-8"&gt;
-          &lt;div className="space-y-4"&gt;
-            {subtitle &amp;&amp; (
-              &lt;span className="text-accent font-medium tracking-wider text-sm uppercase"&gt;
+      <section
+        className="py-24 bg-background border-b border-border/40"
+        aria-labelledby={headingId}
+      >
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center space-y-8">
+          <div className="space-y-4">
+            {subtitle && (
+              <span className="text-accent font-medium tracking-wider text-sm uppercase">
                 {subtitle}
-              &lt;/span&gt;
+              </span>
             )}
-            &lt;h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground"&gt;
+            <h2
+              id={headingId}
+              className="font-serif text-4xl md:text-5xl font-bold text-foreground"
+            >
               {title}
-            &lt;/h2&gt;
-          &lt;/div&gt;
-          &lt;div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed"&gt;
+            </h2>
+          </div>
+
+          <div className="prose prose-lg mx-auto text-muted-foreground leading-relaxed">
             {children}
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/section&gt;
+          </div>
+
+          {showButton && (
+            <Button
+              variant="outline"
+              className="mt-4 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+              onClick={onButtonClick}
+            >
+              {buttonText}
+            </Button>
+          )}
+        </div>
+      </section>
     );
   }
 
   return (
-    &lt;section className="py-24 bg-background overflow-hidden border-b border-border/40"&gt;
-      &lt;div className="container mx-auto px-4 md:px-6"&gt;
-        &lt;div className={cn(
-          "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
-          reverse &amp;&amp; "lg:grid-flow-dense"
-        )}&gt;
+    <section
+      className="py-24 bg-background overflow-hidden border-b border-border/40"
+      aria-labelledby={headingId}
+    >
+      <div className="container mx-auto px-4 md:px-6">
+        <div
+          className={cn(
+            "grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
+            reverse && "lg:grid-flow-dense"
+          )}
+        >
           {/* Content Side */}
-          &lt;div className={cn(
-            "space-y-8",
-            reverse &amp;&amp; "lg:col-start-2"
-          )}&gt;
-            &lt;div className="space-y-4"&gt;
-              {subtitle &amp;&amp; (
-                &lt;span className="text-accent font-medium tracking-wider text-sm uppercase"&gt;
+          <div className={cn("space-y-8", reverse && "lg:col-start-2")}>
+            <div className="space-y-4">
+              {subtitle && (
+                <span className="text-accent font-medium tracking-wider text-sm uppercase">
                   {subtitle}
-                &lt;/span&gt;
+                </span>
               )}
-              &lt;h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"&gt;
+              <h2
+                id={headingId}
+                className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"
+              >
                 {title}
-              &lt;/h2&gt;
-            &lt;/div&gt;
-            
-            &lt;div className="prose prose-lg text-muted-foreground leading-relaxed"&gt;
-              {children}
-            &lt;/div&gt;
+              </h2>
+            </div>
 
-            &lt;Button variant="outline" className="mt-4 border-primary text-primary hover:bg-primary hover:text-white transition-colors"&gt;
-              Learn More
-            &lt;/Button&gt;
-          &lt;/div&gt;
+            <div className="prose prose-lg text-muted-foreground leading-relaxed">
+              {children}
+            </div>
+
+            {showButton && (
+              <Button
+                variant="outline"
+                className="mt-4 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+                onClick={onButtonClick}
+              >
+                {buttonText}
+              </Button>
+            )}
+          </div>
 
           {/* Image Side */}
-          &lt;div className={cn(
-            "relative",
-            reverse &amp;&amp; "lg:col-start-1"
-          )}&gt;
-            &lt;div className="relative aspect-[4/5] md:aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"&gt;
-              &lt;img 
-                src={imageUrl} 
-                alt={imageAlt} 
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              /&gt;
+          <div className={cn("relative", reverse && "lg:col-start-1")}>
+            <div className="relative aspect-[4/5] md:aspect-[4/3] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              {/* Only render <img> when imageUrl is provided to avoid broken image icon */}
+              {imageUrl ? (
+                <img
+                  src={imageUrl}
+                  alt={imageAlt}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  className="w-full h-full bg-muted/40"
+                />
+              )}
+
               {/* Decorative Border */}
-              &lt;div className="absolute inset-4 border border-white/30 rounded-xl pointer-events-none" /&gt;
-            &lt;/div&gt;
-            {/* Background Texture Element */}
-            &lt;div className="absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" /&gt;
-            &lt;div className="absolute -z-10 -top-8 -left-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl" /&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
+              <div className="absolute inset-4 border border-white/30 rounded-xl pointer-events-none" />
+            </div>
+
+            {/* Background Texture Elements (self-closing divs are OK in JSX) */}
+            <div className="absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+            <div className="absolute -z-10 -top-8 -left-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
